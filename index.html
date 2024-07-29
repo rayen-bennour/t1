@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Med - Elegant Transportation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 300;
+        }
+        h1, h2 {
+            font-weight: 300;
+        }
+        .hero {
+            background-image: url('taxi-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #fff;
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        #about {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        #book {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+        #reservationForm {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #f5f5f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        #reservationForm h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 300;
+            font-size: 32px;
+        }
+        #reservationForm input,
+        #reservationForm select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #fff;
+        }
+        #reservationForm select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+        #reservationForm button {
+            width: 100%;
+            padding: 15px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #reservationForm button:hover {
+            background-color: #333;
+        }
+        .payment-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .payment-icons img {
+            width: 40px;
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 14px;
+            background-color: #f5f5f7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1>Taxi Med</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#book">Book</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Elegant Transportation</h1>
+            <p>Experience the future of taxi services</p>
+            <a href="#book" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Since 1985, Taxi Med has been redefining the art of transportation. We started with a single car and a vision: to make every journey an experience of comfort and reliability. Today, we continue to drive forward with innovation, always putting our customers first. Taxi Med isn't just about reaching your destination; it's about enjoying the ride.</p>
+        </div>
+    </section>
+
+    <section id="book">
+        <div class="container">
+            <form id="reservationForm">
+                <h2>Book Your Ride</h2>
+                <input type="text" id="pickup" name="pickup" placeholder="Pickup Location" required>
+                <input type="text" id="destination" name="destination" placeholder="Destination" required>
+                <input type="date" id="date" name="date" required>
+                <input type="time" id="time" name="time" required>
+                <select id="passengers" name="passengers" required>
+                    <option value="" disabled selected>Number of Passengers</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <button type="submit">Book Now</button>
+            </form>
+
+            <div class="payment-icons">
+                <img src="visa-icon.png" alt="Visa">
+                <img src="mastercard-icon.png" alt="Mastercard">
+                <img src="paypal-icon.png" alt="PayPal">
+                <!-- Add more payment icons as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Taxi Med. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            alert(`Booking confirmed! Details sent to ${email}.`);
+            console.log('Booking details:', {
+                pickup: document.getElementById('pickup').value,
+                destination: document.getElementById('destination').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                passengers: document.getElementById('passengers').value,
+                email: email
+            });
+        });
+    </script>
+</body>
+</html>
